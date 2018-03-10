@@ -40,10 +40,10 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `device` ;
 
 CREATE TABLE IF NOT EXISTS `device` (
-  `iddevice` INT NOT NULL,
+  `guid` INT NOT NULL,
   `device_description` VARCHAR(45) NULL,
   `adress_idadress` INT NOT NULL,
-  PRIMARY KEY (`iddevice`),
+  PRIMARY KEY (`guid`),
   INDEX `fk_device_adress_idx` (`adress_idadress` ASC),
   CONSTRAINT `fk_device_adress`
     FOREIGN KEY (`adress_idadress`)
